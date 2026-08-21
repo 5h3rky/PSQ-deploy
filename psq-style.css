@@ -425,6 +425,12 @@ section { position: relative; padding: clamp(70px, 10vw, 130px) 0; }
 .amenity-card p { font-size: .82rem; color: var(--ivory-dim); margin-top: 8px; }
 .amenity-level { font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--sky); margin-top: 12px; display: block; }
 
+/* ===== KEY HIGHLIGHTS ===== */
+.hl-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.hl-card { flex: 1 1 220px; max-width: 280px; border: 1px solid var(--line); border-radius: 6px; padding: 24px 22px; background: var(--panel-2); text-align: center; }
+.hl-card .hl-en { font-size: .92rem; color: var(--ivory); line-height: 1.35; }
+.hl-card .hl-zh { font-size: .8rem; color: var(--ivory-dim); margin-top: 8px; }
+
 /* ===== LOCATION ===== */
 .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
 .loc-map-embed { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); aspect-ratio: 4/5; filter: grayscale(.25) contrast(1.05); }
