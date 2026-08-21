@@ -498,6 +498,8 @@ form.lead-form { background: var(--panel-2); border: 1px solid var(--line); bord
 .field.invalid input, .field.invalid select, .field.invalid textarea { border-color: #d98a6a; }
 .field.invalid .err { display: block; }
 .submit-btn { width: 100%; justify-content: center; margin-top: 6px; border: none; cursor: pointer; }
+.submit-btn:disabled,
+.submit-btn:disabled:hover { background: var(--stone); color: var(--panel); border-color: var(--stone); opacity: .5; cursor: not-allowed; transform: none; }
 .form-note { font-size: .72rem; color: var(--stone); margin-top: 14px; text-align: center; }
 .form-success { display: none; text-align: center; padding: 40px 10px; }
 .form-success.show { display: block; }
@@ -589,8 +591,16 @@ footer { padding: 70px 0 30px; }
   letter-spacing: 0; text-transform: none; cursor: pointer;
 }
 .consent input[type="checkbox"] {
-  flex: none; width: 16px; height: 16px; margin-top: 2px;
-  accent-color: var(--gold); cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+  flex: none; width: clamp(11px, 2.8vw, 14px); height: clamp(11px, 2.8vw, 14px); margin-top: 2px; padding: 0;
+  border: 1px solid var(--line); border-radius: 3px; background: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background .2s, border-color .2s;
+  box-sizing: border-box;
+}
+.consent input[type="checkbox"]:checked { background: var(--gold); border-color: var(--gold); }
+.consent input[type="checkbox"]:checked::after {
+  content: '\2713'; font-size: 75%; line-height: 1; color: var(--ink); font-weight: 700;
 }
 .consent a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
 .consent a:hover { opacity: .8; }

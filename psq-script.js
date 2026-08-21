@@ -119,6 +119,12 @@ const fields = document.getElementById('formFields');
 const success = document.getElementById('formSuccess');
 const waLink = document.getElementById('waLink');
 
+const consentCheckbox = document.getElementById('f-consent');
+const submitBtn = form.querySelector('.submit-btn');
+const syncSubmitState = () => { submitBtn.disabled = !consentCheckbox.checked; };
+consentCheckbox.addEventListener('change', syncSubmitState);
+syncSubmitState();
+
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   let valid = true;
