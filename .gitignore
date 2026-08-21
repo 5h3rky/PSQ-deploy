@@ -1,0 +1,7 @@
+# Never deploy these
+.git/
+.DS_Store
+__MACOSX/
+*.pdf
+PQS Image/
+node_modules/
